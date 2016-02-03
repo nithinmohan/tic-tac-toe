@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+		<script src="a.js"></script>
+		<style>
+			.box{
+				width:100px;
+				height:100px;
+				border:2px solid black;
+				float:left;
+				display: table-cell;
+			}
+			.row{
+				display: table-row;
+			}
+			#area{
+				display: table;
+			}
+		</style>
+	</head>
+	<body ng-app="app"  ng-controller="controller" ng-cloak>
+		<div id="area">
+			<div class="row">
+				<div class="box" ng-click="mark(0)">{{value(0)}}</div>
+				<div class="box" ng-click="mark(1)">{{value(1)}}</div>
+				<div class="box" ng-click="mark(2)">{{value(2)}}</div>
+			</div>
+			<div>
+				<div class="box" ng-click="mark(3)">{{value(3)}}</div>
+				<div class="box" ng-click="mark(4)">{{value(4)}}</div>
+				<div class="box" ng-click="mark(5)">{{value(5)}}</div>
+			</div>
+			<div>
+				<div class="box" ng-click="mark(6)">{{value(6)}}</div>
+				<div class="box" ng-click="mark(7)">{{value(7)}}</div>
+				<div class="box" ng-click="mark(8)">{{value(8)}}</div>
+			</div>	
+		</div>
+		Score X:{{xScore()}}<br>
+		Score O:{{oScore()}}
+	</body>
+</html>
